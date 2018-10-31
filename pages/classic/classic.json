@@ -1,0 +1,5 @@
+{
+  "usingComponents":{
+    "cpn-like":"/components/like/index"
+  }
+}
