@@ -1,5 +1,7 @@
 {
   "usingComponents":{
-    "cpn-like":"/components/like/index"
+    "cpn-like":"/components/like/index",
+    "cpn-movie":"/components/classic/movie/index",
+    "cpn-epsoide":"/components/epsoide/index"
   }
 }

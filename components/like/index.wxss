@@ -17,4 +17,5 @@
   position: relative;
   bottom: 10rpx;
   left: 6rpx;
+  width: 90rpx;
 }

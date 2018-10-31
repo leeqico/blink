@@ -1,3 +1,7 @@
 <!--pages/classic/classic.wxml-->
-<cpn-like />
-<view class='container'></view>
+<!-- 组件属性赋值与页面渲染 -->
+<view class='header'>
+  <cpn-epsoide class='epsoide' index='{{classic.index}}'/>
+  <cpn-like class='like' bind:like='onLike' like='{{classic.like_status}}' count='{{classic.fav_nums}}' />
+</view>
+<cpn-movie img='{{classic.image}}' content='{{classic.content}}' />

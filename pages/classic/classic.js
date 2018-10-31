@@ -1,23 +1,32 @@
 // pages/classic/classic.js
+import {ClassicModel} from '../../models/classic.js'
+import { LikeModel } from '../../models/like.js'
+let classicModel = new ClassicModel()
+let likeModel = new LikeModel()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    classic:null,
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.request({
-      url: 'http://bl.7yue.pro/v1/classic/latest',
-      header: {
-        appKey:'98HcsgdJ3mx4Ufcm'
-      }
+    classicModel.getLatest((res)=>{
+      this.setData({
+        classic:res
+      })
     })
+  },
+
+  onLike: function (event) {
+    let behavior = event.detail.behavior
+    likeModel.like(behavior,this.data.classic.id,this.data.classic.type)
+    console.log(behavior)
   },
 
   /**
